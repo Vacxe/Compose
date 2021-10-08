@@ -13,7 +13,7 @@ jobs:
           java-version: 1.8
       - uses: little-core-labs/get-git-tag@v3.0.2
       - name: deploy-release
-        run: ./gradlew :compose:publishDefaultPublicationToOSSHRRepository -PreleaseMode=RELEASE --stacktrace
+        run: ./gradlew publishDefaultPublicationToOSSHRRepository -PreleaseMode=RELEASE --stacktrace
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
